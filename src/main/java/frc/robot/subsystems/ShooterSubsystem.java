@@ -127,8 +127,8 @@ public class ShooterSubsystem extends SubsystemBase {
 			
 		SmartDashboard.putNumber("Velocity", rightEncoder.getVelocity());*/
 
-		leftMotor.set(1);
-		rightMotor.set(1);
+		leftMotor.set(-1);
+		rightMotor.set(-1);
 		
 	}
 
