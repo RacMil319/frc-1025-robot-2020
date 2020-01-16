@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.ChasisSubsystem;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import frc.robot.ImpiLib;
 
 public class DriveManuallyCommand extends CommandBase {
@@ -30,10 +31,14 @@ public class DriveManuallyCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {		
-    XboxController getDriverController() = RobotContainer.getgetDriverController()();
-		double speed =   ImpiLib.signedSquare(ImpiLib.deadzone(getDriverController().getY(Hand.kLeft),  0.05));
-		double rotation = ImpiLib.signedSquare(ImpiLib.deadzone(getDriverController().getX(Hand.kRight), 0.05));
-		RobotContainer.chassisSubsystem.arcadeDrive(speed, rotation);
+    XboxController DriverController = RobotContainer.getDriverController();
+		double move =   ImpiLib.signedSquare(ImpiLib.deadzone(getDriverController().getY(Hand.kLeft),  0.05));
+		double turn = ImpiLib.signedSquare(ImpiLib.deadzone(getDriverController().getX(Hand.kRight), 0.05));
+		RobotContainer.chasisSubsystem.drive.arcadeDrive(move, turn);
+  }
+
+  private XboxController getDriverController() {
+    return null;
   }
 
   // Called once the command ends or is interrupted.
