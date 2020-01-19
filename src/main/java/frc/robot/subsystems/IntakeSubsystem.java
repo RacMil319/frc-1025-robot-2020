@@ -10,7 +10,7 @@
     import frc.robot.RobotContainer;
     import frc.robot.commands.*;
 
-    public class IntakeSubsystems extends SubsystemBase {
+    public class IntakeSubsystem extends SubsystemBase {
 
         public WPI_TalonSRX intakeWheel = new WPI_TalonSRX(Constants.intakeArmPort);
         public WPI_TalonSRX intakePull = new WPI_TalonSRX(Constants.intakePullPort);
