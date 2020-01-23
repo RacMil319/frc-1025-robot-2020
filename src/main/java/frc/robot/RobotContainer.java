@@ -15,6 +15,8 @@ import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.ChasisSubsystem;
+import frc.robot.subsystems.ConveyorRollersRoll;
+import frc.robot.subsystems.ConveyorSubsystem;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -36,6 +38,7 @@ public class RobotContainer {
 
   public static ChasisSubsystem chasisSubsystem = new ChasisSubsystem();
   public static IntakeSubsystem intakeSubsystem = new IntakeSubsystem();
+  public static ConveyorSubsystem conveyorSubsystem = new ConveyorSubsystem();
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.

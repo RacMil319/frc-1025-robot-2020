@@ -28,4 +28,5 @@ public final class Constants {
     // Controllers
     public static final int OI_DRIVER_CONTROLLER_CHANNEL = 0;
     public static final int OI_BUTTONS_CONTROLLER_CHANNEL = 1;
+	public static final int CONVEYOR_ROLLERS_PORT = 0;
 }

@@ -32,8 +32,10 @@ public class ChasisSubsystem extends SubsystemBase {
   public DifferentialDrive drive = new DifferentialDrive(leftFront, rightFront);
 
   public ChasisSubsystem() {
-    leftRear.follow(leftFront);
-    rightRear.follow(rightFront);
+
+    //Slave and Master used for everything but drive
+    // leftRear.follow(leftFront);
+    // rightRear.follow(rightFront);
   }
   // this is manualDrive() method
   public void manualDrive(double move, double turn) {
