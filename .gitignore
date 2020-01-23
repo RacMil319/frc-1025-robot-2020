@@ -97,7 +97,7 @@ Icon
 
 # Directories potentially created on remote AFP share
 .AppleDB
-.AppleDesktop
+.AppleDeskArm
 Network Trash Folder
 Temporary Items
 .apdisk
@@ -119,7 +119,7 @@ ehthumbs_vista.db
 *.stackdump
 
 # Folder config file
-[Dd]esktop.ini
+[Dd]eskArm.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

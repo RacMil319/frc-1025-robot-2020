@@ -16,13 +16,13 @@
            public WPI_TalonSRX intakeArm = new WPI_TalonSRX(Constants.intakeArmPort);
            public WPI_TalonSRX intakePull = new WPI_TalonSRX(Constants.intakePullPort);
          
-           public DifferentialDrive drive = new DifferentialDrive(intakeArm, intakePull);
+           //public DifferentialDrive drive = new DifferentialDrive(intakeArm, intakePull);
            
            public IntakeSubsystem() {
            }
            // this is manualDrive() method
            public void manualIntake(double flap, double spin) {
-            drive.arcadeDrive(flap, spin);
+            //drive.arcadeDrive(flap, spin);
            }
          
            @Override
