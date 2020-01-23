@@ -4,12 +4,14 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.Constants;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.ConveyorSubsystem;
+import frc.robot.ImpiLib;
 
 public class ConveyorRollersRoll extends CommandBase {
     
-    private static final String ImpiLib2020 = null;
+  
     ConveyorSubsystem conveyorSubsystem = new ConveyorSubsystem();
     
     public ConveyorRollersRoll() {
@@ -22,8 +24,8 @@ public class ConveyorRollersRoll extends CommandBase {
 	// Called every time the scheduler runs while the command is scheduled.
 	@Override
 	public void execute() {
-		XboxController driverController = RobotContainer.buttonsController;
-		conveyorSubsystem.conveyorControl(Math.pow(ImpiLib2020.deadzone(butonsController.getY(Hand.kRight), 0.05), 2));
+		XboxController buttonsController = new XboxController(Constants.OI_BUTTONS_CONTROLLER_CHANNEL);
+		conveyorSubsystem.conveyorControl(ImpiLib.deadzone(buttonsController.getY(Hand.kRight), 0.05));
 	}
 
 	// Called once the command ends or is interrupted.
