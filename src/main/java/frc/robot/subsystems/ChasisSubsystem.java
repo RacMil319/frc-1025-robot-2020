@@ -7,8 +7,6 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -21,11 +19,12 @@ public class ChasisSubsystem extends SubsystemBase {
   /**
    * Creates a new ChasisSubsystem.
    */
-  public WPI_TalonSRX leftFront = new WPI_TalonSRX(Constants.leftFrontPort);
-  public WPI_TalonSRX rightFront = new WPI_TalonSRX(Constants.rightFrontPort);
-  public WPI_TalonSRX leftRear = new WPI_TalonSRX(Constants.leftRearPort);
-  public WPI_TalonSRX rightRear = new WPI_TalonSRX(Constants.rightRearPort);
-
+  
+  public CANSparkMax leftFront = new CANSparkMax(Constants.leftFrontPort);
+  public CANSparkMax rightFront = new CANSparkMax(Constants.rightFrontPort);
+  public CANSparkMax leftRear = new CANSparkMax(Constants.leftRearPort);
+  public CANSparkMax rightRear = new CANSparkMax(Constants.rightRearPort);
+  
   SpeedControllerGroup leftMotorGroup = new SpeedControllerGroup(leftFront, leftRear);
   SpeedControllerGroup rightMotorGroup = new SpeedControllerGroup(rightFront, rightRear);
 
